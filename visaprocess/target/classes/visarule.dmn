@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/1.0" id="Definitions_0zapevj" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.6.0">
+  <decision id="visaRule" name="Visa Rule">
+    <extensionElements>
+      <biodi:bounds x="150" y="150" width="180" height="80" />
+    </extensionElements>
+    <decisionTable id="decisionTable_1" hitPolicy="RULE ORDER">
+      <input id="input_1" label="Visa Type">
+        <inputExpression id="inputExpression_1" typeRef="string">
+          <text>visaType</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1re3dow" label="Duration">
+        <inputExpression id="LiteralExpression_0xscjsw" typeRef="long">
+          <text>duration</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0v7p0gl" label="Age">
+        <inputExpression id="LiteralExpression_0uet0xg" typeRef="integer">
+          <text>age</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_09cmzcr" label="Skill">
+        <inputExpression id="LiteralExpression_120w3ec" typeRef="integer">
+          <text>skill</text>
+        </inputExpression>
+      </input>
+      <output id="output_1" label="Status" name="status" typeRef="boolean" />
+      <rule id="DecisionRule_0gfhlul">
+        <inputEntry id="UnaryTests_0914wc8">
+          <text>"H1"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0avezte">
+          <text>[12..36]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iw4qtc">
+          <text>&gt;45</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_16vnkcr">
+          <text>2</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0r7t1e0">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0rnmkrt">
+        <inputEntry id="UnaryTests_0nrg2nq">
+          <text>"B1"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01bz6xy">
+          <text>[1..3]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ilbr8o">
+          <text>&lt;=35</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fhncnt">
+          <text>1</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0phgis2">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0uq3fad">
+        <inputEntry id="UnaryTests_0tg1ruq">
+          <text>"B2"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j6c8pj">
+          <text>[0.5..3]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0o4o3ou">
+          <text>&lt;=45</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0enjjfd">
+          <text>1</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xw26b9">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_04k4jxv">
+        <inputEntry id="UnaryTests_0lpenzg">
+          <text>"H1"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_042hhw4">
+          <text>[12..36]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0sim49y">
+          <text>&lt;=45</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0dohml7">
+          <text>1</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0m3c0ws">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1uwyqxc">
+        <inputEntry id="UnaryTests_1dwl11j">
+          <text>"B1"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14gzvc7">
+          <text>[1,2,3]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0phihc8">
+          <text>&gt;35</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07mhe4b">
+          <text>2</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0mlsnpi">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_013ee27">
+        <inputEntry id="UnaryTests_1kyht7k">
+          <text>"B2"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rrlef2">
+          <text>[0.5..3]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0esvxt9">
+          <text>&gt;45</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1osnolg">
+          <text>2</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0l77m6c">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
